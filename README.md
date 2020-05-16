@@ -1,7 +1,10 @@
-# starter express app template
+everything worked locally but keep getting "blocked by CORS" after I deployed it to heroku
 
-* node with babel
-* expressjs
-* airbnb eslint rules
+Screencap1 (home pg)
+![Alt text](screencap1.png?raw=true)
 
-Procfile set up to run on [heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app)
+Screencap2 (update note pg)
+![Alt text](screencap2.png?raw=true)
+
+Screencap3 (new note pg)
+![Alt text](screencap3.png?raw=true)
