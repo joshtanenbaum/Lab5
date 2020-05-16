@@ -1,4 +1,4 @@
-everything worked locally but keep getting "blocked by CORS" after I deployed it to heroku
+I struggled to find the right mongoose function/format to update the db, but I eventually found it.
 
 Screencap1 (home pg)
 ![Alt text](screencap1.png?raw=true)
