@@ -7,6 +7,7 @@ export const createPost = (req, res) => {
   post.tags = req.body.tags;
   post.content = req.body.content;
   post.coverUrl = req.body.coverUrl;
+  post.username = req.user.username; /* create route is an authenticated route, so passport added the user object to the request */
   post.save()
     .then((result) => {
       res.json({ message: 'Post created!' });
@@ -20,7 +21,7 @@ export const createPost = (req, res) => {
 export const getPosts = (req, res) => {
   Post.find({})
     .then((posts) => {
-      res.send(posts); 
+      res.send(posts);
     })
     .catch((error) => {
       res.status(500).json({ error });
@@ -51,7 +52,9 @@ export const deletePost = (req, res) => {
 
 
 export const updatePost = (req, res) => {
-  Post.update({ _id: req.params.id }, { title: req.body.title, tags: req.body.tags, content: req.body.content, coverUrl: req.body.coverUrl })
+  Post.update({ _id: req.params.id }, {
+    title: req.body.title, tags: req.body.tags, content: req.body.content, coverUrl: req.body.coverUrl,
+  })
     .then((result) => {
       res.json({ message: 'Post created!' });
     })

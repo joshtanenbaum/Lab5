@@ -4,11 +4,13 @@ import mongoose, { Schema } from 'mongoose';
 const PostSchema = new Schema({
   title: String,
   tags: String,
-  content: String, 
+  content: String,
   coverUrl: String,
+  username: String,
 }, {
   toObject: { virtuals: true },
   toJSON: { virtuals: true },
+  timestamps: true,
 });
 
 // create PostModel class from schema
